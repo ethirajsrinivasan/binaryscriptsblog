@@ -16,7 +16,7 @@ In Spark 2.0, while `SparkContext` retains its core functionality, the framework
 
 In Spark 1.0, `SparkContext` uses `SparkConf` to configure the Spark setting as follows:
 
-```code
+```python
 from pyspark import SparkContext, SparkConf
 
 # Create a SparkConf object with configuration settings
@@ -27,7 +27,7 @@ sc = SparkContext(conf=conf)
 ```
 
 In Spark 2.0 and later versions, the creation of `SparkContext` was implicit.
-```code
+```python
 from pyspark.sql import SparkSession
 
 # Create a SparkSession, which implicitly creates a SparkContext
@@ -45,7 +45,7 @@ In version 1.0, the emergence of `SQLContext` is a significant leap in structure
 As the journey of Spark evolved, In 2.0 the `SQLContext` has been abstracted into `SparkSession` to provide a single entry point for the Spark ecosystem.
 
 In Spark 1.0, `SQLContext` was created from `SparkContext`.
-```code
+```python
 from pyspark.sql import SQLContext
 from pyspark import SparkContext, SparkConf
 
@@ -60,7 +60,7 @@ sqlContext = SQLContext(sc)
 ```
 
 In Spark 2.0 and later versions:
-```code
+```python
 from pyspark.sql import SparkSession
 
 # Create a SparkSession, which implicitly creates a SQLContext
@@ -76,7 +76,7 @@ In the Spark 1.0 era, `HiveContext` played a crucial role in bridging the gap be
 `HiveContext` faced deprecation in Spark 2.0. `SparkSession` with Hive support was the recommended way to serve the community's intention to make SparkSession the single entry point.
 
 Like `SQLContext`, `HiveContext` also is created using `SparkContext` in Spark 1.0
-```code
+```python
 from pyspark.sql import HiveContext
 from pyspark import SparkContext, SparkConf
 
@@ -90,7 +90,7 @@ sc = SparkContext(conf=conf)
 hiveContext = HiveContext(sc)
 ```  
 In Spark 2.0:
-```code
+```python
 from pyspark.sql import SparkSession
 
 # Create a SparkSession with Hive support
