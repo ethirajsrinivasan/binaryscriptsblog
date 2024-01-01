@@ -10,8 +10,10 @@ The Apache Spark ecosystem has undergone significant transformations in the past
 
 
 #### SparkContext: Foundation of Spark Applications
-In Spark 1.0, `SparkContext`  a.k.a `sc` is the main entry point for the Spark application. Its major functions were to set up and initialize the Spark application, establish a connection with the Spark cluster, and coordinate the execution of tasks. 
+In Spark 1.0, `SparkContext`  a.k.a `sc` is the main entry point for the Spark application. Its major functions were to set up and initialize the Spark application, establish a connection with the Spark cluster, and coordinate the execution of tasks.
+
 In Spark 2.0, while `SparkContext` retains its core functionality, the framework introduced a higher-level abstraction known as `SparkSession`. 
+
 In Spark 1.0, `SparkContext` uses `SparkConf` to configure the Spark setting as follows:
 
 ```code
@@ -39,7 +41,9 @@ The `getOrCreate()` method ensures that a `SparkContext` is created if it does n
 
 #### SQLContext: Bridging the Structured Data Gap
 In version 1.0, the emergence of `SQLContext` is a significant leap in structured data processing. It provides a high-level API to work with structured data using Spark SQL, allowing users to seamlessly integrate SQL queries into their Spark programs. 
-As the journey of Spark evolved in 2.0, the `SQLContext` has been abstracted into `SparkSession` to provide a single entry point for the Spark ecosystem.
+
+As the journey of Spark evolved, In 2.0 the `SQLContext` has been abstracted into `SparkSession` to provide a single entry point for the Spark ecosystem.
+
 In Spark 1.0, `SQLContext` was created from `SparkContext`.
 ```code
 from pyspark.sql import SQLContext
@@ -68,7 +72,9 @@ sqlContext = spark.sqlContext
 
 #### HiveContext: Bridging Spark and Hive
 In the Spark 1.0 era, `HiveContext` played a crucial role in bridging the gap between Spark and Apache Hive. It allowed Spark applications to leverage Hive's metadata and operate seamlessly on Hive tables.
+
 `HiveContext` faced deprecation in Spark 2.0. `SparkSession` with Hive support was the recommended way to serve the community's intention to make SparkSession the single entry point.
+
 Like `SQLContext`, `HiveContext` also is created using `SparkContext` in Spark 1.0
 ```code
 from pyspark.sql import HiveContext
