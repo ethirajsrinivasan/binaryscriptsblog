@@ -43,8 +43,8 @@ At the center of the ensemble is the Hive Thrift Server, which facilitates commu
 * **Configuration Modes**: In the remote mode, it operates as a Thrift service, ideal for non-Java applications, and in the embedded mode it allows direct interaction with the Metastore using JDBC, ideal for Java applications
 
 #### The Virtuoso: Optimizer
-* Optimization Strategies: The optimizer refines the execution plan with strategies like predicate pushdown, cost-based optimization, and task parallelization for improved efficiency
-* Integration with Execution Engine: The optimizer submits the plan to the execution engine which further translates the logical plan into actionable tasks on the Hadoop cluster.
+* **Optimization Strategies**: The optimizer refines the execution plan with strategies like predicate pushdown, cost-based optimization, and task parallelization for improved efficiency
+* **Integration with Execution Engine**: The optimizer submits the plan to the execution engine which further translates the logical plan into actionable tasks on the Hadoop cluster.
 
 #### The Powerhouse: Execution Engine
 
